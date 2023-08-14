@@ -8,15 +8,16 @@
 const sayHello = function () {
     return function () {
         console.log("Hello");
-
     }
 }
+
 let myFunc = sayHello();
 myFunc();
 
 function speak(string) {
     console.log(string);
 }
+
 speak("Hello");
 
 var talk = speak;
@@ -118,6 +119,7 @@ var actionCelebrity = [{
     name: 'Will Smith',
     id: 234
 }];
+
 var createIdForActionCelebs = celebrityIdCreator(actionCelebrity);
 var stalloneId = createIdForActionCelebs[0];
 console.log(stalloneId.id);
@@ -181,6 +183,7 @@ for (var i = 0; i < animals.length; i++) {
     }
 }
 console.log(dogs);
+
 // Filter Method
 var dogs = animals.filter(function (animal) {
     return animal.species === 'dog';
@@ -188,7 +191,6 @@ var dogs = animals.filter(function (animal) {
 console.log(dogs);
 
 const companyInfo = [
-
     {
         name: "Google",
         category: "Technology",
@@ -243,8 +245,6 @@ const companyInfo = [
         start: 1991,
         end: "Still Running"
     }
-
-
 ];
 
 const ages = [33, 12, 20, 16, 8, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
@@ -311,7 +311,6 @@ console.log(agesTimesTwo);
 
 // Sort Method
 const sortedCompanies = companyInfo.sort(function (company1, company2) {
-
     if (company1 > company2) {
         return 1;
     } else {
@@ -365,13 +364,11 @@ console.log(book1.getSummary());
 console.log(Object.values(book1));
 
 // Constructor Pattern
-
 function Book(title, author, year, price) {
     this.title = title;
     this.author = author;
     this.year = year;
     this.price = price;
-
 
     this.getSummary = function () {
         return `Book Name: ${this.title}, Book Author: ${this.author}, Published Year: ${this.year}`;
@@ -396,7 +393,6 @@ const book5 = new Book("Head First Javascript", "Elisabeth Freeman and Eric Free
 console.log(book5.getBookPrice());
 
 Book.prototype.getBookAge = function () {
-
     // let bookage = new Date().getFullYear()-this.year;
     let currentYear = 2018;
     let bookAge = currentYear - this.year;
@@ -472,7 +468,6 @@ mobilePriceYear.call(mobile, '$799', 2015);
 mobileOthersInfo.apply(mobile, ['White', '3GB', '3000mah', '64GB']);
 
 // Object Of Protos | Object.create
-
 const bookProtos = {
     getSummary: function () {
         return `${this.title} was written by ${this.author} in ${this.year}`;
@@ -552,10 +547,8 @@ colors.push('black');
 console.log(colors);
 
 // Class and Inheritance
-
 class User {
     constructor(username, email, password) {
-
         this.username = username;
         this.email = email;
         this.password = password;
@@ -909,7 +902,6 @@ class Room {
 }
 
 class Properties extends Room {
-
     constructor(size, color, price, table, bed, door, window) {
         super(size, color, price);
         this.table = table;
